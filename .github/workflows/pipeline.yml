@@ -38,6 +38,9 @@ jobs:
           mkdir -p logs
           python script.py | tee logs/output.log
 
+      - name: Subir logs a S3
+        run: aws s3 cp logs/output.log s3://${{ env.BUCKET_NAME }}/logs/output-${{ github.run_id }}.log
+
       - name: Guardar logs
         uses: actions/upload-artifact@v4
         with:
