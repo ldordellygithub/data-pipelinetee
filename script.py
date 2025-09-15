@@ -16,3 +16,6 @@ filtered.to_csv(FILE_NAME, index=False)
 s3 = boto3.client("s3")
 s3.upload_file(FILE_NAME, BUCKET, FILE_NAME)
 print(f"Archivo {FILE_NAME} subido a S3 correctamente.")
+
+
+##  se  verifica  credenciales
