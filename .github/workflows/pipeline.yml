@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      BUCKET_NAME: mi-bucket-ejemplo
+      BUCKET_NAME: mi-bucket-ejemplo2025
       AWS_REGION: us-east-1
 
     steps:
@@ -30,8 +30,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
-          audience: sts.amazonaws.com
-          output-env-credentials: true
+    
 
       - name: Ejecutar script
         run: |
